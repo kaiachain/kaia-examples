@@ -1,0 +1,17 @@
+{
+  "version": "1",
+  "name": "usdt-demo",
+  "abis": {
+    "usdtabi": {
+      "path": "./abi.json"
+    }
+  },
+  "instances": [
+    {
+      "abi": "usdtabi",
+      "address": "0xd077a400968890eacc75cdc901f0356c943e4fdb",
+      "startBlock": 30801565,
+      "chain": "kaia"
+    }
+  ]
+}

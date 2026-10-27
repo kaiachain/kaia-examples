@@ -1,0 +1,7 @@
+*.sw*
+.idea
+node_modules
+transfer_conf.json
+
+# Copied bridge operator keystores (see erc20/erc20-addOperator4HA.js)
+*_bridge_account/
