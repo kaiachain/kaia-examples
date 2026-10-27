@@ -40,7 +40,7 @@ async function getFreshToken() {
   const alice = "0xc40b6909eb7085590e1c26cb3becc25368e249e9";
 
   try {
-    const tokenURI = "https://www.klaytn.com";
+    const tokenURI = "https://www.kaia.io";
     const tokenId = await getFreshToken();
     console.log(`tokenId: ${tokenId}`);
 

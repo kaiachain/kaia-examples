@@ -35,11 +35,11 @@ forge test
 Deploying to a network uses the [foundry scripting system](https://book.getfoundry.sh/tutorials/solidity-scripting), where you write your deploy scripts in solidity!
 
 ### Setup
-We'll demo using the Klaytn Baobab testnet. (request test KLAY [here](https://baobab.wallet.klaytn.foundation/faucet).)
+We'll demo using the Kairos testnet. (request test KAIA [here](https://faucet.kaia.io).)
 
 You'll need to add the following variables to a .env file:
 
-BAOBAB_RPC_URL: A URL to connect to the blockchain. You can get one for free from one of the supported [endpoint providers](https://docs.klaytn.foundation/content/dapp/json-rpc/public-en).
+KAIROS_RPC_URL: A URL to connect to the blockchain, e.g. `https://public-en-kairos.node.kaia.io`. You can also use one of the [public RPC providers](https://docs.kaia.io/references/public-en/).
 
 PRIVATE_KEY: A private key from your wallet. You can get a private key from a new Metamask account.
 
@@ -51,20 +51,20 @@ Run the command below to deploy to the blockchain
 source .env
 
 # To deploy and verify our contract
-forge script script/SCRIPT_FILE_NAME:SCRIPT_CONTRACT_NAME --rpc-url $BAOBAB_RPC_URL --broadcast --skip-simulation -vvvv
+forge script script/SCRIPT_FILE_NAME:SCRIPT_CONTRACT_NAME --rpc-url $KAIROS_RPC_URL --broadcast --skip-simulation -vvvv
 ```
 
 For example:
 
 ```bash
 # deploy airdropKIP17.sol
-forge script script/airdropKIP7.s.sol:KIP7AirdropDeployScript --rpc-url $BAOBAB_RPC_URL --broadcast --skip-simulation -vvvv
+forge script script/airdropKIP7.s.sol:KIP7AirdropDeployScript --rpc-url $KAIROS_RPC_URL --broadcast --skip-simulation -vvvv
 
 # deploy airdropKIP17.sol
-forge script script/airdropKIP17.s.sol:KIP17AirdropDeployScript --rpc-url $BAOBAB_RPC_URL --broadcast --skip-simulation -vvvv
+forge script script/airdropKIP17.s.sol:KIP17AirdropDeployScript --rpc-url $KAIROS_RPC_URL --broadcast --skip-simulation -vvvv
 
 # deploy KIP37MultiToken.sol
-forge script script/KIP37MultiToken.s.sol:KIP37MultiTokenDeployScript --rpc-url $BAOBAB_RPC_URL --broadcast --skip-simulation -vvvv
+forge script script/KIP37MultiToken.s.sol:KIP37MultiTokenDeployScript --rpc-url $KAIROS_RPC_URL --broadcast --skip-simulation -vvvv
 
 ```
 

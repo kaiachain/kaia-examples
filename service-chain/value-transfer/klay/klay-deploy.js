@@ -14,9 +14,9 @@ async function deploy(url, sender, info, bridgeIdentity) {
   sender.address = caver.klay.accounts.wallet.add(sender.key).address;
 
   try {
-    // Send intial 1000 KLAY to ServiceChain bridge contract, not parent bridge contract
-    // Sending the initial KLAY for parent bridge contract (e.g., baobab, cypress, or your another ServiceChain) is handled at the time of sending KLAY from ServiceChain to Parent chain ('klay-transfer.js')
-    // Check the balance first before sending 1000 KLAY to bridge contract
+    // Send intial 1000 KAIA to ServiceChain bridge contract, not parent bridge contract
+    // Sending the initial KAIA for parent bridge contract (e.g., Kairos, Kaia mainnet, or another ServiceChain) is handled at the time of sending KAIA from ServiceChain to Parent chain ('klay-transfer.js')
+    // Check the balance first before sending 1000 KAIA to bridge contract
     let amount = 0;
     if (bridgeIdentity == "child") {
       amount = caver.utils.toPeb(1000, 'KLAY');

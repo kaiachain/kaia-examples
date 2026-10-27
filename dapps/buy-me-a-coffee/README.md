@@ -19,12 +19,10 @@ cd kaia-examples/dapps/buy-me-a-coffee
 
 cd smart-contract
 npm install
-cp .env.example .env   # set BAOBAB_URL (Kairos RPC) and PRIVATE_KEY
-npx hardhat run scripts/deploy.js --network baobab
+cp .env.example .env   # set KAIROS_TESTNET_URL and PRIVATE_KEY
+npx hardhat run scripts/deploy.js --network kairos
 
 cd ../frontend
 npm install
 npm run dev
 ```
-
-> This example predates the Klaytn → Kaia rebrand. The `baobab` network and `BAOBAB_URL` variable point to the Kairos testnet (chain ID 1001), e.g. `https://public-en-kairos.node.kaia.io`.

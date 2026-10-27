@@ -8,9 +8,9 @@ You will need to set environment variables. You can do so by setting them in you
 
 IMPORTANT: MAKE SURE YOU'D DON'T EXPOSE THE KEYS YOU PUT IN THIS .env FILE. By that, I mean don't push them to a public repo, and please try to keep them keys you use in development not associated with any real funds.
 
-**Set your BAOBAB_URL  environment variable.**
+**Set your KAIROS_TESTNET_URL environment variable.**
 
-You can get one for free from our list of RPC Provider [here](https://docs.klaytn.foundation/content/dapp/rpc-service/public-en).
+Use the public Kairos endpoint `https://public-en-kairos.node.kaia.io`, or pick one from the list of [public RPC providers](https://docs.kaia.io/references/public-en/).
 
 **Set your PRIVATE_KEY environment variable.**
 
@@ -25,7 +25,7 @@ This is your private key from your wallet, ie MetaMask. This is needed for deplo
 `.env` example:
 
 ```js
-BAOBAB_URL='Paste RPC URL'
+KAIROS_TESTNET_URL='Paste RPC URL'
 PRIVATE_KEY='Paste Private Key'
 ```
 

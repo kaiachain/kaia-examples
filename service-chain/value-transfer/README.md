@@ -6,7 +6,7 @@
 
 # How to run
 All the script files, ```*.sh``` sequantilly run contract deployment, one-step (`requestValueTransfer()`), and two-step (`approve()` and `requestXXXTransfer()`) transfers.
-The `kscn` binary, ofifcially provided by Klaytn Team is currently not aware of one-step transfer handling from KIP7 and KIP17 token transfer reqeust and they are intentionally omitted.
+The `kscn` binary, officially provided by the Kaia team is currently not aware of one-step transfer handling from KIP7 and KIP17 token transfer reqeust and they are intentionally omitted.
 Also, current NFT transfer example has a minor bug of URI loss, which means the URI value is always retrieved as empty after token transfer. This problem would be fixed in v1.18.1
 ### ERC-20
 ```
@@ -43,7 +43,7 @@ node kip17-deploy.js
 node kip17-transfer-2step-erc721-interface.js
 ```
 
-### KLAY
+### KAIA
 You must check if the sender that calls the transfer request has enough balance first.
 ```
 cd klay
@@ -53,8 +53,8 @@ node klay-transfer.js
 ```
 
 ### Reference
-- [Getting Started](https://ko.docs.klaytn.com/node/service-chain/getting-started)
-- [Value Transfer Reference](https://ko.docs.klaytn.com/node/service-chain/references/value-transfer)
+- [Getting Started](https://docs.kaia.io/nodes/service-chain/getting-started/)
+- [Value Transfer Reference](https://docs.kaia.io/nodes/service-chain/references/value-transfer/)
 
 ## How the KIP token can be transferred using ERC-dedicated bridge contract function and vice versa?
 The function `requestValueTransfer()` from both KIP7 and KIP17 contracts are currently not supported. However, both KIP7 and KIP17 are compatiable with ERC20 and ERC721, respectively,

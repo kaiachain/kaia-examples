@@ -30,17 +30,17 @@ function sleep(ms) {
     const senderBalance = await enCaver.utils.convertFromPeb(await enCaver.rpc.klay.getBalance(conf.sender.parent.address));
     assert(senderBalance >= initialAmount);
 
-    // Send KLAY from the sender on parent chain to bridge contract on the parent chain
+    // Send KAIA from the sender on parent chain to bridge contract on the parent chain
     await enInstanceBridge.methods.chargeWithoutEvent().send({from: conf.sender.parent.address, gas: 100000000, value: initialAmount});
 
-    // Send 1 KLAY from child chain to parent chain
-    console.log("Send 1 KLAY from child chain to parent chain");
+    // Send 1 KAIA from child chain to parent chain
+    console.log("Send 1 KAIA from child chain to parent chain");
     await scnInstanceBridge.methods.requestKLAYTransfer(aliceOfMain, amountTobeSent, []).send({from: conf.sender.child.address, gas: 100000000, value: amountTobeSent});
     // Wait event to be trasnferred to child chain and contained into new block
     await sleep(6000);
 
-    // Send 1 KLAY from parent chain to child chain
-    console.log('Send 1 KLAY from parent chain to child chain');
+    // Send 1 KAIA from parent chain to child chain
+    console.log('Send 1 KAIA from parent chain to child chain');
     await enInstanceBridge.methods.requestKLAYTransfer(bobOfSub, amountTobeSent, []).send({from: conf.sender.parent.address, gas: 100000000, value: amountTobeSent});
     // Wait event to be trasnferred to child chain and contained into new block
     await sleep(2000);
